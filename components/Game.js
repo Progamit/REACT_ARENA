@@ -10,7 +10,6 @@ import PropTypes from 'prop-types';
 
 export default function Game(props) {
 
-    const finalMusic = useRef(new Audio('final_music.wav'));
 
     const [whichPlayerTurn, setWhichPlayerTurn] = useState(1);
     const [howManyPlayers, setHowManyPlayers] = useState(0);
