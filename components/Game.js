@@ -84,7 +84,7 @@ export default function Game(props) {
     };
 
     const restartGame = () => {
-        finalMusic.current.load();
+
         setHeroesSelected([]);
         setWorldSelected(null);
         setWhichPlayerTurn(1);
