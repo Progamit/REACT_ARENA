@@ -1,0 +1,481 @@
+.admin-panel {
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+    padding-bottom: 3rem;
+}
+.admin-panel header {
+    display: flex;
+    padding: 1rem 1rem 0 1rem;
+}
+.admin-panel header h1 {
+    margin: 0;
+    padding: 5px 0 0 0;
+    flex-grow: 2;
+}
+.admin-panel button {
+    margin: 0;
+    padding: 0;
+}
+.admin-panel button:hover {
+    border: 1px solid white;
+}
+
+.arena-container {
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://cdnb.artstation.com/p/assets/images/images/053/383/523/medium/joe-grabenstetter-roman-arena-concept-fina2l.jpg?1662063599');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    overflow: hidden;
+}
+#test {
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://cdnb.artstation.com/p/assets/images/images/053/383/523/medium/joe-grabenstetter-roman-arena-concept-fina2l.jpg?1662063599');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: -2px;
+}
+
+.avatar {
+    max-width: 10rem;
+    max-height: 50vh;
+}
+.avatar img {
+    max-height: 100%;
+    max-width: 12rem;
+}
+
+#results {
+    width: 640px;
+    height: 360px;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXkS1crhANK3kdjVb68ES39YQhI2AZcv4idQ&usqp=CAU');
+    background-size: contain;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+#results h1 {
+    font-size: 4rem;
+    margin-top: 10px;
+    color: rgb(219, 37, 37);
+}
+#results button {
+    width: 12.5rem;
+    margin-top: 9rem;
+    margin-right: 0.5rem;
+    border: none;
+    font-size: 1.5rem;
+}
+#results button:hover {
+    border: 1px solid white;
+}
+
+.choose-hero-header {
+    color: darkblue;
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.panel {
+    width: 40rem;
+    height: 20rem;
+    background-color: darkkhaki;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+label {
+    text-align: center;
+    width: max-content;
+    display: block;
+    margin: 1rem auto;
+    cursor: pointer;
+}
+.panel input {
+    cursor: pointer;
+    margin-right: 1rem;
+}
+.players-number-button {
+    margin-top: 3rem;
+}
+.panel button:hover {
+    border: 1px solid white;
+}
+
+.data-container {
+    width: 100%;
+    background-color: lightseagreen;
+    margin-top: 5rem;
+    display: flex;
+}
+.data-container .icon-crown-plus {
+    place-self: center;
+}
+.data-list {
+    width: 50%;
+    border-right: 1px solid grey;
+}
+.data-list h3 {
+    text-align: center;
+    padding: 1rem 0 2rem 1rem;
+    font-size: 1.5rem;
+}
+.data-container-grid {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: row;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 1rem;
+    padding: 0 5px 1rem 5px;
+}
+
+.icon-crown-plus {
+    color: green;
+}
+
+.data-editor {
+    width: 50%;
+    padding: 0 5px 10px 5px;
+}
+.data-editor h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+.data-editor h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.data-editor textarea {
+    width: 100%;
+    font-size: 15px;
+    padding: 2px;
+}
+.data-editor input {
+    width: 100%;
+    padding: 1px 2px;
+    text-align: center;
+}
+.data-editor label {
+    cursor: default;
+}
+.database-response {
+    padding: 1rem;
+}
+input:focus,
+textarea:focus {
+    background-color: #f0ffc4;
+}
+
+.data-icons-container {
+    width: 100%;
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-evenly;
+    position: relative;
+}
+.data-icon {
+    font-size: 50px;
+    cursor: pointer;
+}
+.data-icon-description {
+    position: absolute;
+    top: 120%;
+    font-size: 1.1rem;
+}
+
+.description-update,
+.description-delete {
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+
+.data-icons-container button {
+    font-size: 1rem;
+}
+
+.icon-arrows-cw {
+    color: blue;
+}
+.icon-arrows-cw:hover ~ .description-update {
+    opacity: 100%;
+}
+.icon-crown-minus {
+    color: maroon;
+}
+.icon-crown-minus:hover ~ .description-delete {
+    opacity: 100%;
+}
+
+.data-item {
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+}
+.data-item:hover {
+    border: 2px dashed white;
+}
+.data-item p {
+    padding-bottom: 0;
+}
+.data-item-world {
+    background-color: brown;
+    color: antiquewhite;
+}
+.data-item-hero {
+    background-color: #6b4d2f;
+}
+.data-item-id {
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+}
+.data-item-name {
+    font-size: 0.9rem;
+    word-wrap: break-word;
+}
+.selected {
+    border: 2px dashed white;
+}
+
+.content {
+    color: red;
+    background-color: burlywood;
+    width: 100%;
+    border: brown 1px solid;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 1rem 3rem 0 1rem;
+}
+button {
+    height: 3rem;
+    width: 6rem;
+    background-color: brown;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #dcffe7;
+    display: block;
+    margin-top: 1rem;
+}
+.back-to-welcome-page-button {
+    position: absolute;
+    margin: 0;
+    top: 1rem;
+    left: 1rem;
+}
+.back-to-welcome-page-button:hover {
+    border: 3px solid green;
+}
+
+.hero {
+    color: aliceblue;
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+    padding-left: 10px;
+    background-color: darkolivegreen;
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
+    height: fit-content;
+    width: 20rem;
+    margin-bottom: 1rem;
+}
+
+.hero-name {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: darkred;
+}
+.hero img {
+    float: right;
+    width: 11rem;
+    min-height: 10rem;
+    display: block;
+    padding: 0;
+    margin-left: 1px;
+}
+.hero p {
+    padding: 0.5rem 0;
+}
+.hero:hover {
+    transform: translate(-2%, -2%);
+}
+span {
+    color: rgb(1, 1, 158);
+}
+.clear {
+    clear: both;
+}
+
+.hero-form-worlds-radio {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.hero-form-worlds-radio label {
+    margin: 0;
+}
+input[type='radio']:focus {
+    outline-width: 2px;
+    outline-color: bisque;
+}
+
+
+.login-panel {
+    position: absolute;
+    padding: 1rem;
+    background-color: green;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid goldenrod;
+}
+.login-button:hover {
+    border: 1px solid white;
+}
+.login-panel p {
+    text-align: center;
+    color: bisque;
+    font-size: 1.5rem;
+}
+.login-panel input {
+    padding: 0 0.5rem;
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+.login-buttons {
+    display: flex;
+}
+.login-buttons button {
+    width: 5rem;
+}
+
+.welcome-page {
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnSAiZWyqyRgb-pEm-aCydCcI0mVPyoCdn9L7EtgiqeVNFqY6qGBGDq6SD4v6dVLbKJeI&usqp=CAU');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.welcome-page h1,
+h2 {
+    text-align: center;
+    font-weight: bold;
+}
+.welcome-page h2 {
+    margin: 0 0 2rem 0;
+
+    font-size: 2rem;
+    color: white;
+}
+.welcome-page h1 {
+    color: khaki;
+    margin: 0 0 8rem 0;
+    padding-top: 2%;
+    font-size: 3rem;
+}
+.welcome-page-buttons {
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    width: 40%;
+}
+.welcome-page-button {
+    padding: 0;
+    margin: 0;
+    width: 10rem;
+    height: 10rem;
+    transition: background-color 0.3s ease-in-out;
+}
+.welcome-page-button:hover {
+    background-color: #cd7100;
+}
+.start-game-button img {
+    width: 100%;
+    height: 100%;
+}
+.manage-database-button img {
+    width: 50%;
+    height: 50%;
+}
+.manage-database-button p {
+    font-size: 1rem;
+    padding-top: 1rem;
+    color: black;
+    font-weight: bold;
+}
+
+.world,
+.disabled_world {
+    border-radius: 0.5rem;
+    color: aliceblue;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 20rem;
+    height: 20rem;
+    background-color: brown;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.disabled_world {
+
+    cursor: default;
+    opacity: 0.6;
+}
+
+.world-info-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.world-name {
+    font-size: 2rem;
+    color: goldenrod;
+    margin-bottom: 1rem;
+}
+.world:hover {
+    transform: translate(-2%, -2%);
+}
+
+.world img,
+.disabled_world img {
+    width: 100%;
+    margin-bottom: 1rem;
+    max-height: 6rem;
+}
+
